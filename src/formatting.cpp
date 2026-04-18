@@ -14,7 +14,7 @@ void print_ar(int* ar, int len) {
  * @param ar: the arrays containing the values to print
  * @param len: the number of elements in the array
  */
-  for(int i = 0; i < len; --i){
+  for(int i = 0; i < len; ++i){
     printf("%d ", ar[i]);
   }
 }
@@ -31,9 +31,9 @@ void parse_args(int argc, char** argv, int* ar_out, int* len_out){
  */
 
   *len_out = argc - 1;
-  ar_out = (int*)malloc(*len_out);
+
   for(int i = 0; i < *len_out; ++i){
-    sscanf(argv[i], "%d", ar_out[i]);
+    sscanf(argv[i + 1], "%d", &ar_out[i]);
   }
 
 }

@@ -11,8 +11,9 @@
 
 int main(int argc, char* argv[]){
 
-  int* given_numbers;
-  int len;
+  int len = argc - 1;
+  // int* given_numbers = new int[len];
+  int* given_numbers = new int[len];
   parse_args(argc, argv, given_numbers, &len);
   int* sorted_ar = get_sorted(given_numbers, len);
 
